@@ -1,0 +1,9 @@
+.dashicons-mixd {
+    background-image: url('../imgs/mixd-logo-cropped.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.toplevel_page_mixd-wp-plugins:hover .dashicons-mixd{
+    background-image: url('../imgs/mixd-logo-cropped-yellow.png');
+}
