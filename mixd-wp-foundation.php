@@ -11,6 +11,12 @@
  */
 
 
+/**
+ * If we're not being loaded by WordPress, abort now
+ */
+if ( !defined( 'WPINC' ) ) { die; }
+
+
 
 /**
  * Set 'Administrator' and 'Editor' roles to have access to Plugin config by default
