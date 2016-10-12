@@ -16,8 +16,10 @@
  * @since 1.0.0
  */
 function mixd_wp_demo_add_caps() {
+    
     $role = get_role('administrator');
     $role->add_cap('mixd_wp_demo_config');
+    
     $role = get_role('editor');
     $role->add_cap('mixd_wp_demo_config');
 }
@@ -32,12 +34,13 @@ add_action( 'admin_init', 'mixd_wp_demo_add_caps' );
  * @since 1.0.0
  */
 function mixd_wp_demo_options_page() {
-
+    
     add_submenu_page(
-        'mixd-wp-plugins',              // $page_title
-        'Mixd Plugins: Demo Plugin',    // $menu_title
-        'mixd_wp_plugins',              // $capability
-        'mixd-wp-demo',                 // $menu_slug
+        'mixd-wp-plugins',              // $parent_slug
+        'Mixd Plugins: Demo Plugin',    // $page_title
+        'Demo Plugin',                  // $menu_title
+        'mixd_wp_demo_config',          // $capability
+        'mixd_wp_demo_options',         // $menu_slug
         'mixd_wp_demo_options'          // $callback
     );
 
